@@ -1,12 +1,14 @@
-function UserDetails({person, height}){
+function UserDetails({ person, height }) {
 
-    return(
+    return (
         <>
-        <p> Full name {person.name}</p>
-        <p> Age {person.age}</p>
-        <p> Height {height}</p>
+            <p draggable={true}
+                onDragStart={e => console.log('onDragStart')}
+                onDragEnd={e => console.log('onDragEnd')}> Full name {person.name}</p>
+            <p> Age {person.age}</p>
+            <p> Height {height}</p>
         </>
-    )        
+    )
 
 }
 
