@@ -12,25 +12,32 @@ function User() {
     const [userHeight, setHeight] = useState(0);
     const [userWeight, setWeight] = useState(0);
 
-    const handleHeightIncrement= ()=>{setHeight(userHeight+10)}
+    const incrementHeightByTen = () => {
+        setHeight((prev) => prev + 10)
+    }
+
+    const incrementWeightByTen = () => {
+        setWeight((prev) => prev + 10)
+    }
+
+    // deep copy shallow copy, state update ways in react, spread operator in arrays and objects. 
+    //  how to pass a callback for example a setter in the props.
 
     return (
         <>
-            {/* Condition for show User*/}
-            <button onClick={() => setShowDetails(!showDetails)} >Toggle show details</button>
+            {/* <button onClick={() => setShowDetails(!showDetails)} >Toggle show details</button>
             {showDetails ?
                 <UserDetails person={{ name: "Hammad", age: 26, height: { userHeight }, weight: { userWeight } }} />
                 :
                 <UserHeight />
             }
 
-            {/* Condition for show height*/}
             <button onClick={() => setShowDetails(!showDetails)} >Toggle show details</button>
             {showDetails ?
                 <UserDetails person={{ name: "Hammad", age: 26, height: { userHeight }, weight: { userWeight } }} />
                 :
                 <UserHeight />
-            }
+            } */}
 
 
 
@@ -38,7 +45,14 @@ function User() {
             {/* Condition for show weight*/}
             <button onClick={() => setShowDetails(!showDetails)} >Toggle show details</button>
             {showDetails ?
-                <UserDetails person={{ name: "Hammad", age: 26, height: { userHeight }, weight: { userWeight } }} />
+                <>
+                    <button onClick={incrementWeightByTen}>Increment weight by 10</button>
+                    <button onClick={() => setWeight(0)}>reset</button>
+                    <button onClick={incrementHeightByTen}>Increment height by 10</button>
+                    <button onClick={() => setHeight(0)}>reset</button>
+                    <UserDetails person={{ name: "Hammad", age: 26, height: { userHeight }, weight: { userWeight } }} />
+
+                </>
                 :
                 <UserHeight />
             }
@@ -48,12 +62,6 @@ function User() {
 
 
     )
-    return <Child onIncrement={handleHeightIncrement} />;
-    return <Child onIncrement={handleHeightReset} />;
-    return <Child onIncrement={handleWeightIncrement} />;
-    return <Child onIncrement={handleWeightReset} />;
-
-
 }
 
 export default User;

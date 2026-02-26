@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function UserDetails({ person, height, weight, setHeight, setWeight}) {
+function UserDetails({ person, height, weight}) {
 
     const [isOverWeight, setIsOverWeight] = useState(false)
 
@@ -26,18 +26,10 @@ function UserDetails({ person, height, weight, setHeight, setWeight}) {
         }
     }, [])
 
-    const incrementWeightByTen = () => {
-        setWeight((prev) => prev + 10)
-    }
-
-
 
     return (
         <>
-            <button onClick={Child({incrementWeightByTen})}>Increment weight by 10</button>
-            <button onClick={() => setWeight(0)}>reset</button>
-            <button onClick={incrementHeightByTen}>Increment weight by 10</button>
-            <button onClick={() => setHeight(0)}>reset</button>
+
             <p> Full name {person.name}</p>
             <p> Age {person.age}</p>
             <p> Height {height}</p>
