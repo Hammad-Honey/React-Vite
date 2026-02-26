@@ -4,8 +4,9 @@ import viteLogo from '/vite.svg'
 import './app.css'
 import HOCPractice from './components/HOCPractice'
 import Components from './components/ChildComponent';
-
-
+import Header from './components/header/Header.jsx'
+import Footer from './components/footer/Footer.jsx'
+import User from './components/Userprofile/user'
 
 
 function App() {
@@ -13,16 +14,25 @@ function App() {
   const abc = "naam"
 
   return (
-    <div className='appbackground'>
-      <Components.ExampleComponent/>
-      <Components.Counter/>
-      <HOCPractice />
-      {/* <ChildComponent count={mount} name={abc} />
+    <>
+      <Header />
+      <div className='appbackground'>
+        <Components.ExampleComponent />
+        <Components.Counter />
+        <HOCPractice />
+        <User />
+        
+
+
+        {/* <ChildComponent count={mount} name={abc} />
 
       <button onClick={() => setMount((prev)=> prev + 1)}>
         count ++
       </button> */}
-    </div>
+      </div>
+      <Footer />
+    </>
+
   )
 }
 
