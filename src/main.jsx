@@ -19,11 +19,13 @@ import User from './components/Userprofile/user'
 // }
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  // <StrictMode>
+  <>
     <Header/>
     {/* {array} */}
     <App />
     <User />
     <Footer />
-  </StrictMode>,
+    </>
+  // </StrictMode>,
 )

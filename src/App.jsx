@@ -1,8 +1,11 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import ChildComponent from './components/ChildComponent'
 import './app.css'
+import HOCPractice from './components/HOCPractice'
+import Components from './components/ChildComponent';
+
+
 
 
 function App() {
@@ -11,12 +14,14 @@ function App() {
 
   return (
     <div className='appbackground'>
-      
-      <ChildComponent count={mount} name={abc} />
+      <Components.ExampleComponent/>
+      <Components.Counter/>
+      <HOCPractice />
+      {/* <ChildComponent count={mount} name={abc} />
 
       <button onClick={() => setMount((prev)=> prev + 1)}>
         count ++
-      </button>
+      </button> */}
     </div>
   )
 }
