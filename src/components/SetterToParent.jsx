@@ -1,5 +1,4 @@
 import React from "react"
-import SetterFromParent from "./SetterFromParent"
 function SetterToParent({increment}){
     return(
         <>

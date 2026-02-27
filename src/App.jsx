@@ -4,8 +4,8 @@ import viteLogo from '/vite.svg';
 import './app.css';
 import HOCPractice from './components/HOCPractice';
 import Components from './components/ChildComponent';
-import Header from './components/header/Header.jsx';
-import Footer from './components/footer/Footer.jsx';
+import Header from './components/Header/Header.jsx';
+import Footer from './components/Footer/Footer.jsx';
 import User from './components/Userprofile/user';
 import {Counter, CounterProblem, ObjectsUseState} from './useStateExamples.jsx'
 import { CounterProblemFixed } from './components/CounterProblemFixed.jsx';
