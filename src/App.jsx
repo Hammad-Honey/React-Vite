@@ -7,7 +7,9 @@ import Components from './components/ChildComponent';
 import Header from './components/header/Header.jsx';
 import Footer from './components/footer/Footer.jsx';
 import User from './components/Userprofile/user';
-import {Counter, CounterProblem, CounterProblemFixed, ObjectsUseState, ArrayUseState} from './useStateExamples.jsx'
+import {Counter, CounterProblem, ObjectsUseState} from './useStateExamples.jsx'
+import { CounterProblemFixed } from './components/CounterProblemFixed.jsx';
+import ArrayUseState from './components/ArrayUseState.jsx';
 
 
 function App() {
@@ -18,9 +20,9 @@ function App() {
     <>
       <Header />
       <div className='appbackground'>
-        <ArrayUseState/>
+        <ArrayUseState />
         <ObjectsUseState/>
-        <CounterProblemFixed/>
+        <CounterProblemFixed />
         <Counter/>
         <CounterProblem/>
         <Components.ExampleComponent />
