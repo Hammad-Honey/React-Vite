@@ -1,12 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './app.css'
-import HOCPractice from './components/HOCPractice'
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
+import './app.css';
+import HOCPractice from './components/HOCPractice';
 import Components from './components/ChildComponent';
-import Header from './components/header/Header.jsx'
-import Footer from './components/footer/Footer.jsx'
-import User from './components/Userprofile/user'
+import Header from './components/header/Header.jsx';
+import Footer from './components/footer/Footer.jsx';
+import User from './components/Userprofile/user';
+import {Counter, CounterProblem, CounterProblemFixed, ObjectsUseState, ArrayUseState} from './useStateExamples.jsx'
 
 
 function App() {
@@ -17,6 +18,11 @@ function App() {
     <>
       <Header />
       <div className='appbackground'>
+        <ArrayUseState/>
+        <ObjectsUseState/>
+        <CounterProblemFixed/>
+        <Counter/>
+        <CounterProblem/>
         <Components.ExampleComponent />
         <Components.Counter />
         <HOCPractice />

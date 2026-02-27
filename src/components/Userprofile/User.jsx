@@ -2,11 +2,6 @@ import { use, useState } from "react";
 import UserDetails from "./UserDetails";
 
 
-const UserHeight = () => {
-
-    return <>This is user height </>
-}
-
 function User() {
     const [showDetails, setShowDetails] = useState(false);
     const [userHeight, setHeight] = useState(0);
@@ -47,14 +42,14 @@ function User() {
             {showDetails ?
                 <>
                     <button onClick={incrementWeightByTen}>Increment weight by 10</button>
-                    <button onClick={() => setWeight(0)}>reset</button>
+                    <button onClick={() => setWeight(0)}>reset weight</button>
                     <button onClick={incrementHeightByTen}>Increment height by 10</button>
-                    <button onClick={() => setHeight(0)}>reset</button>
-                    <UserDetails person={{ name: "Hammad", age: 26, height: { userHeight }, weight: { userWeight } }} />
+                    <button onClick={() => setHeight(0)}>reset Height</button>
+                    <UserDetails person={{ name: "Hammad", age: 26}} height={userHeight} weight={userWeight}   />
 
                 </>
                 :
-                <UserHeight />
+                <></>
             }
 
 

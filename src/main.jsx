@@ -18,12 +18,12 @@ import App from './App.jsx'
 // }
 
 createRoot(document.getElementById('root')).render(
-  // <StrictMode>
-  <>
+  <StrictMode>
+    <>
 
-    {/* {array} */}
-    <App />
-   
+      {/* {array} */}
+      <App />
+
     </>
-  // </StrictMode>,
+  </StrictMode>,
 )
