@@ -19,6 +19,10 @@ const ArrayUseState = () => {
         setItems(prev => [...prev, 'Banana']) // we are just spreading old items and merging new item ('banana',...prev)
     }
 
+    const removeBanana=()=>{
+        setItems(prev=>prev.filter(item=>item!=='Banana'))
+    }
+
     return (
         <>
             {/* <p>{user? <>Name = {user.firstName} / Age = {user.age}</>:<>Nothing Exist</>}</p>
@@ -32,6 +36,7 @@ const ArrayUseState = () => {
                 ) 
 
             }>Add new banana</button>
+            <button onClick={removeBanana}>Remove Banana</button>
 
         </>
 

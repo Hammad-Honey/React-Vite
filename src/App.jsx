@@ -10,6 +10,7 @@ import User from './components/Userprofile/user';
 import {Counter, CounterProblem, ObjectsUseState} from './useStateExamples.jsx'
 import { CounterProblemFixed } from './components/CounterProblemFixed.jsx';
 import ArrayUseState from './components/ArrayUseState.jsx';
+import SetterFromParent from './components/SetterFromParent.jsx'
 
 
 function App() {
@@ -19,7 +20,9 @@ function App() {
   return (
     <>
       <Header />
+
       <div className='appbackground'>
+        <SetterFromParent/>
         <ArrayUseState />
         <ObjectsUseState/>
         <CounterProblemFixed />
