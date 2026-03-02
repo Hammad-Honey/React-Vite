@@ -20,10 +20,6 @@ function SetterFromParent() {
             
         </>
 
-
-
-
-
     )
 }
 export default SetterFromParent

@@ -15,6 +15,8 @@ function User() {
         setWeight((prev) => prev + 10)
     }
 
+            
+
     // deep copy shallow copy, state update ways in react, spread operator in arrays and objects. 
     //  how to pass a callback for example a setter in the props.
 
@@ -38,7 +40,20 @@ function User() {
 
 
             {/* Condition for show weight*/}
-            <button onClick={() => setShowDetails(!showDetails)} >Toggle show details</button>
+            <button onClick={() => 
+                { 
+                    setShowDetails((prev)=> {
+                        const sum = 1 + 1;
+                        console.log(sum)
+                        return !prev
+                    }
+                     ) 
+
+                }} 
+                >
+                
+                
+                Toggle show details</button>
             {showDetails ?
                 <>
                     <button onClick={incrementWeightByTen}>Increment weight by 10</button>
