@@ -1,13 +1,14 @@
-import { useContext } from "react";
-import { useUserData } from "../../context/userContext";
+import { useAuth } from "../../context/UserAuth";
 
 export default function Dashboard(){
-  const {someData, setSomeData, user, setUser} = useUserData();
+  const {user,login,logout} = useAuth();
 
 
     return(
         <>
-        <p>Welcome Mr./Mrs user {user}</p>
+        <button onClick={()=>login("Hammad")}>Login</button>
+        <button onClick={logout}>Logout</button>
+        <p>Welcome {user}!</p>
         </>
     );
 }

@@ -12,9 +12,8 @@ import { CounterProblemFixed } from './components/CounterProblemFixed.jsx';
 import ArrayUseState from './components/ArrayUseState.jsx';
 import SetterFromParent from './components/SetterFromParent.jsx'
 //Importing User Context
+import { AuthProvider } from './context/UserAuth.jsx';
 import Dashboard from './components/Userprofile/Dashboard.jsx';
-import { useUserData } from './context/userContext.jsx';
-
 
 function App() {
 
@@ -22,6 +21,13 @@ function App() {
     <>
       <Header />
       <div className='appbackground'>
+        <AuthProvider>
+            <Dashboard/>
+        </AuthProvider>
+
+
+
+
         <SetterFromParent />
         <ArrayUseState />
         <ObjectsUseState />
