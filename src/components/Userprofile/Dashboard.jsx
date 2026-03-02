@@ -1,13 +1,13 @@
-import { userContext } from "../../context/userContext";
 import { useContext } from "react";
+import { useUserData } from "../../context/userContext";
 
 export default function Dashboard(){
-    const user=useContext(userContext);
+  const {someData, setSomeData, user, setUser} = useUserData();
 
 
     return(
         <>
-        <p>Welcome Mr./Mrs {user} </p>
+        <p>Welcome Mr./Mrs user {user}</p>
         </>
     );
 }

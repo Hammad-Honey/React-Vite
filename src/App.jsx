@@ -12,27 +12,16 @@ import { CounterProblemFixed } from './components/CounterProblemFixed.jsx';
 import ArrayUseState from './components/ArrayUseState.jsx';
 import SetterFromParent from './components/SetterFromParent.jsx'
 //Importing User Context
-import { userContext } from './context/userContext.jsx';
 import Dashboard from './components/Userprofile/Dashboard.jsx';
+import { useUserData } from './context/userContext.jsx';
+
 
 function App() {
-  const [user, setUser] = useState('');
-
-  const loginAsHammad = () => { setUser("Hammad") }
-  const logout = () => { setUser(null) }
 
   return (
     <>
       <Header />
-
       <div className='appbackground'>
-        <button onClick={loginAsHammad}>Login</button>
-        <button onClick={logout}>Logout</button>
-        <userContext.Provider value={user}>
-          <Dashboard/>
-        </userContext.Provider>
-
-
         <SetterFromParent />
         <ArrayUseState />
         <ObjectsUseState />
@@ -43,14 +32,6 @@ function App() {
         <Components.Counter />
         <HOCPractice />
         <User />
-
-
-
-        {/* <ChildComponent count={mount} name={abc} />
-
-      <button onClick={() => setMount((prev)=> prev + 1)}>
-        count ++
-      </button> */}
       </div>
       <Footer />
     </>
