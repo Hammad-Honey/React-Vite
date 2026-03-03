@@ -1,0 +1,26 @@
+:root{
+    text-align: center;
+}
+
+.Dark {
+    background-color: black;
+    color: white;
+
+}
+
+.Light {
+    background-color: white;
+    color: black;
+
+}
+
+.Ocean {
+    background-color: #1DA2D8;
+    color: #DEF3F6;
+
+}
+
+.Sky {
+    background-color: #c7ebdf;
+    color: black;
+}

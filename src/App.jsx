@@ -15,31 +15,30 @@ import SetterFromParent from './components/SetterFromParent.jsx'
 import { AuthProvider } from './context/UserAuth.jsx';
 import Dashboard from './components/Userprofile/Dashboard.jsx';
 
+import ThemeChange from './components/ThemeChange.jsx'
 function App() {
 
   return (
     <>
-      <Header />
-      <div className='appbackground'>
-        <AuthProvider>
-            <Dashboard/>
-        </AuthProvider>
+  
+        
 
-
-
-
-        <SetterFromParent />
-        <ArrayUseState />
-        <ObjectsUseState />
-        <CounterProblemFixed />
-        <Counter />
-        <CounterProblem />
-        <Components.ExampleComponent />
-        <Components.Counter />
-        <HOCPractice />
-        <User />
-      </div>
-      <Footer />
+          <Header />
+          <AuthProvider>
+            <Dashboard />
+          </AuthProvider>
+          <SetterFromParent />
+          <ArrayUseState />
+          <ObjectsUseState />
+          <CounterProblemFixed />
+          <Counter />
+          <CounterProblem />
+          <Components.ExampleComponent />
+          <Components.Counter />
+          <HOCPractice />
+          <User />
+          <ThemeChange/>
+          <Footer />
     </>
 
   )
